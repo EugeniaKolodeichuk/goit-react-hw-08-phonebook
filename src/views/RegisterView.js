@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from '../redux/auth/operations';
+import styles from './views.module.css';
 
-const styles = {
+/* const styles = {
   form: {
     width: 320,
   },
@@ -11,7 +12,7 @@ const styles = {
     flexDirection: 'column',
     marginBottom: 15,
   },
-};
+}; */
 
 export default function RegisterView() {
   const dispatch = useDispatch();
@@ -42,17 +43,24 @@ export default function RegisterView() {
 
   return (
     <div>
-      <h1>Страница регистрации</h1>
+      <h1 className={styles.title}>Registration</h1>
 
-      <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
-          Имя
-          <input type="text" name="name" value={name} onChange={handleChange} />
+      <form onSubmit={handleSubmit} className={styles.form} autoComplete="off">
+        <label className={styles.label}>
+          Name
+          <input
+            className={styles.input}
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
         </label>
 
-        <label style={styles.label}>
-          Почта
+        <label className={styles.label}>
+          E-mail
           <input
+            className={styles.input}
             type="email"
             name="email"
             value={email}
@@ -60,9 +68,10 @@ export default function RegisterView() {
           />
         </label>
 
-        <label style={styles.label}>
-          Пароль
+        <label className={styles.label}>
+          Password
           <input
+            className={styles.input}
             type="password"
             name="password"
             value={password}
@@ -70,7 +79,9 @@ export default function RegisterView() {
           />
         </label>
 
-        <button type="submit">Зарегистрироваться</button>
+        <button className={styles.button} type="submit">
+          Save
+        </button>
       </form>
     </div>
   );

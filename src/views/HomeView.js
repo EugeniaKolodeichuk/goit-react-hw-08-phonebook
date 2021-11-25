@@ -1,6 +1,7 @@
 import React from 'react';
+import styles from './views.module.css';
 
-const styles = {
+/* const styles = {
   container: {
     minHeight: 'calc(100vh - 50px)',
     display: 'flex',
@@ -12,14 +13,14 @@ const styles = {
     fontSize: 48,
     textAlign: 'center',
   },
-};
+}; */
 
 const HomeView = () => (
-  <div style={styles.container}>
-    <h1 style={styles.title}>
+  <div className={styles.container}>
+    <h1 className={styles.title}>
       Create your own contact book{' '}
       <span role="img" aria-label="Иконка приветствия">
-        💁‍♀️
+        🙀
       </span>
     </h1>
   </div>
