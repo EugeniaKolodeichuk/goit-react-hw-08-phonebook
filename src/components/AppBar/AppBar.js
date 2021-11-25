@@ -3,7 +3,7 @@ import Navigation from '../Navigation/Navigation';
 import UserMenu from '../UserMenu/UserMenu';
 import AuthNav from '../AuthNav/AuthNav';
 
-import { getIsLoggedIn, getUsername } from '../../redux/auth/selectors';
+import { getIsLoggedIn } from '../../redux/auth/selectors';
 
 const styles = {
   header: {
