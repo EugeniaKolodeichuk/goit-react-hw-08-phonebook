@@ -35,7 +35,7 @@ export const store = configureStore({
     contacts: contactsReducer,
   },
   middleware,
-  devTools: process.env.NODE_ENV === 'development',
+  devTools: 'true',
 });
 
 // eslint-disable-next-line
