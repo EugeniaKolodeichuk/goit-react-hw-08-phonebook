@@ -3,17 +3,6 @@ import { useDispatch } from 'react-redux';
 import { logIn } from '../redux/auth/operations';
 import styles from './views.module.css';
 
-/* const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-}; */
-
 export default function LoginView() {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');

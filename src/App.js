@@ -1,18 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-/* import Form from './components/Form/Form';
-import ContactList from './components/ContactList/ContactList';
-import Filter from './components/Filter/Filter'; */
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-/* import Container from './components/Container/Container'; */
-/* import AppBar from './components/AppBar/AppBar'; */
-/* import operations from './redux/auth/operations'; */
-import { Switch /* Route */ } from 'react-router';
-/* import ContactsView from './views/ContactsView'; */
-/* import HomeView from './views/HomeView'; */
-/* import RegisterView from './views/RegisterView'; */
-/* import LoginView from './views/LoginView'; */
+import { Switch } from 'react-router';
 import { fetchCurrentUser } from './redux/auth/operations';
 import { lazy, Suspense } from 'react';
 import PrivateRoute from './components/PrivateRoute';
@@ -43,9 +33,6 @@ export default function App() {
           <>
             <AppBar />
             <Switch>
-              {/* <Route exact path="/" component={HomeView} /> */}
-              {/* <Route component={RegisterView} /> */}
-              {/* <Route path="/login" component={LoginView} /> */}
               <PublicRoute exact path="/">
                 <HomeView />
               </PublicRoute>

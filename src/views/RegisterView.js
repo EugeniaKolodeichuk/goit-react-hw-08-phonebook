@@ -3,17 +3,6 @@ import { useDispatch } from 'react-redux';
 import { register } from '../redux/auth/operations';
 import styles from './views.module.css';
 
-/* const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-}; */
-
 export default function RegisterView() {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
